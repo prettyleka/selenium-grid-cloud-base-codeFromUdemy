@@ -88,6 +88,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<suiteXmlFile>src/test/resources/TestSuites/LoginTestsLocal.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/TestSuites/LoginTestsGrid.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
