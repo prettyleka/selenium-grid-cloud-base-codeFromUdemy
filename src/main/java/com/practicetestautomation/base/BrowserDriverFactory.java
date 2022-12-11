@@ -9,7 +9,6 @@ import java.util.logging.Level;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.config.DriverManagerType;
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
-import io.github.bonigarcia.wdm.managers.ChromiumDriverManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -38,8 +37,8 @@ public class BrowserDriverFactory {
 			// Make sure to upgrade chromedriver to work with your browser version: https://chromedriver.chromium.org/downloads
 			//System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
 			//System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
-			WebDriverManager.chromedriver().setup();
-			driver.set(new ChromeDriver());
+
+			driver.set(WebDriverManager.chromedriver().create());
 
 			break;
 
