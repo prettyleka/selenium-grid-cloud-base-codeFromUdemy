@@ -36,11 +36,11 @@
 		
 		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
 		<!-- Some new feature of Selenium 4 doesn't work without this -->
-		<dependency>
+	<!--<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>31.1-jre</version>
-		</dependency>
+		</dependency>   -->  
 
 		<dependency>
 			<groupId>com.saucelabs</groupId>
@@ -87,7 +87,6 @@
 				<configuration>
 					<suiteXmlFiles>
 						<suiteXmlFile>src/test/resources/TestSuites/LoginTestsLocal.xml</suiteXmlFile>
-						<suiteXmlFile>src/test/resources/TestSuites/LoginTestsGrid.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
