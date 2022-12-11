@@ -31,7 +31,8 @@ public class BrowserDriverFactory {
 			// Make sure to upgrade chromedriver to work with your browser version: https://chromedriver.chromium.org/downloads
 			//System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
 			//System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
-			driver = WebDriverManager.chromedriver().create();
+			WebDriverManager.chromedriver().setup();
+			driver= new ChromeDriver();
 			break;
 
 		case "firefox":
@@ -39,7 +40,8 @@ public class BrowserDriverFactory {
 			//System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver");
 			//System.setProperty(FirefoxDriver.Capability.MARIONETTE, "true");
 			//System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
-			driver = WebDriverManager.firefoxdriver().create();
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
 
 			break;
 
@@ -47,7 +49,8 @@ public class BrowserDriverFactory {
 			/*log.debug("Do not know how to start: " + browser + ", starting chrome.");
 			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");*/
-			driver = WebDriverManager.chromedriver().create();
+			WebDriverManager.chromedriver().setup();
+			driver= new ChromeDriver();
 			break;
 		}
 		java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.SEVERE);
