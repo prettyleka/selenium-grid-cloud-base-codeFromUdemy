@@ -38,7 +38,8 @@ public class BrowserDriverFactory {
 			// Make sure to upgrade chromedriver to work with your browser version: https://chromedriver.chromium.org/downloads
 			//System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
 			//System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
-			driver.set(new ChromeDriverManager().create());
+			WebDriverManager.chromedriver().setup();
+			driver.set(new ChromeDriver());
 
 			break;
 
