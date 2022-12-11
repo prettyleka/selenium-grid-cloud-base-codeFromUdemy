@@ -1,11 +1,22 @@
 package com.practicetestautomation.base;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.List;
+import java.util.Optional;
 import java.util.logging.Level;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.config.DriverManagerType;
+import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
+import io.github.bonigarcia.wdm.managers.ChromiumDriverManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chromium.ChromiumDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager.*;
 
 public class BrowserDriverFactory {
 
@@ -27,7 +38,8 @@ public class BrowserDriverFactory {
 			// Make sure to upgrade chromedriver to work with your browser version: https://chromedriver.chromium.org/downloads
 			//System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
 			//System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
-			io.github.bonigarcia.wdm.WebDriverManager.chromedriver().setup();
+			driver.set(new ChromeDriverManager().create());
+
 			break;
 
 		case "firefox":
