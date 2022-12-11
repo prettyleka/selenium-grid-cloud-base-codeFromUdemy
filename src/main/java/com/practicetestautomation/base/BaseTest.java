@@ -20,7 +20,7 @@ public class BaseTest {
 
 	@Parameters({ "browser", "environment", "platform" })
 	@BeforeMethod(alwaysRun = true)
-	public void setUp(Method method, @Optional("") String browser, @Optional("local") String environment, @Optional("") String platform, ITestContext ctx) throws MalformedURLException {
+	public void setUp(Method method, @Optional("chrome") String browser, @Optional("local") String environment, @Optional("") String platform, ITestContext ctx) throws MalformedURLException {
 		log = LogManager.getLogger(ctx.getCurrentXmlTest().getSuite().getName());
 		setProperties();
 

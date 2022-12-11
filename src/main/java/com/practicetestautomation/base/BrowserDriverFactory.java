@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 
 public class BrowserDriverFactory {
@@ -31,7 +32,7 @@ public class BrowserDriverFactory {
 			// Make sure to upgrade chromedriver to work with your browser version: https://chromedriver.chromium.org/downloads
 			//System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
 			//System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
-			WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().create();
 			driver= new ChromeDriver();
 			break;
 
