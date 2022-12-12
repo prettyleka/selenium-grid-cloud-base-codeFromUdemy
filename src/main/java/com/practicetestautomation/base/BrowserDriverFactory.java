@@ -33,7 +33,7 @@ public class BrowserDriverFactory {
 			//System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
 			//System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
 
-			WebDriverManager.chromedriver().create();
+			WebDriverManager.chromedriver().setup();
 			driver= new ChromeDriver();
 			break;
 
