@@ -29,14 +29,18 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean verify
-    - name: Allure report
+    - name: create-report
   # You may pin to the exact commit or the version.
-  # uses: afiore/action-allure-report@e43ebd6f4f4c74b07b1eb02f042902bbe6786a19
-      uses: afiore/action-allure-report@v0.1.0
+  # uses: michaelhenry/create-report@17efef3ac948253d7b5c0c345b940e7828971eaa
+      uses: michaelhenry/create-report@v2.0.0
       with:
-        results-dir: mkdir allure-results
-    # Allure report target dir
-        report-dir: mkdir allure-report
+    # Title of the report
+        title: "Just Report"
+    # File path of the report.
+    #path: # optional
+    # The data format of the summary either markdown or html.
+    #format: # optional, default is markdown
+
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
